@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-helios-bg-center: #0B1020;
+  --color-helios-bg-edge: #020305;
+  --color-helios-bg: #05070D;
+
+  --color-helios-star-white: #F5F7FF;
+  --color-helios-star-blue: #BFD8FF;
+  --color-helios-star-orange: #FFD8A8;
+
+  --color-helios-sun: #F4C96B;
+
+  --color-helios-projects: #FF644F;
+  --color-helios-projects-sec: #FF8C7D;
+
+  --color-helios-experience: #D98B47;
+  --color-helios-experience-sec: #F2C078;
+
+  --color-helios-skills: #4D9A8A;
+  --color-helios-skills-sec: #86CBB8;
+
+  --color-helios-archive: #6E92B5;
+  --color-helios-archive-sec: #B6CADF;
+
+  --color-helios-contact: #8C7FA8;
+  --color-helios-contact-sec: #C6BDD7;
+
+  --color-helios-text-primary: #FFFFFF;
+  --color-helios-text-body: #D5DCEB;
+  --color-helios-text-sec: #95A4C2;
+
+  --font-sans: 'Inter', 'Roboto', 'Outfit', sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-helios-bg);
+  background: radial-gradient(circle at center, var(--color-helios-bg-center) 0%, var(--color-helios-bg-edge) 100%);
+  color: var(--color-helios-text-primary);
+  font-family: var(--font-sans);
+  overflow: hidden; /* Prevent scrolling, 3D handles it */
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(11, 16, 32, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 0.75rem;
+}
