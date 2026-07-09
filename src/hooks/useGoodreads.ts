@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import type { GoodreadsBook } from "../types/goodreads";
 
-const API = "https://pradyun-portfolio-api.vercel.app/api/goodreads";
+const API = "https://pradyun-sushena.vercel.app/api/goodreads";
 
 export function useGoodreads() {
   const [books, setBooks] = useState<GoodreadsBook[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  interface GoodreadsResponse {
+    updated: string;
+    count: number;
+    books: GoodreadsBook[];
+  }
 
   useEffect(() => {
     async function load() {
@@ -17,15 +23,11 @@ export function useGoodreads() {
 
         console.log("Status:", response.status);
 
-        const text = await response.text();
+        const data: GoodreadsResponse = await response.json();
 
-        console.log("Raw response:", text);
+        console.log(data);
 
-        const data: GoodreadsBook[] = JSON.parse(text);
-
-        console.log("Parsed:", data);
-
-        setBooks(data);
+        setBooks(data.books);
       } catch (err) {
         console.error("GOODREADS ERROR:", err);
         setError("Couldn't load books.");
@@ -37,5 +39,6 @@ export function useGoodreads() {
     load();
   }, []);
 
+  books: books.slice(0, 8);
   return { books, loading, error };
 }
