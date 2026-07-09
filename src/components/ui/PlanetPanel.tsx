@@ -72,14 +72,14 @@ function AboutContent({ color }: { color: string }) {
   return (
     <div className="flex flex-col gap-8">
       <section>
-        <p style={{ color: "white", fontSize: "1.1rem", marginTop:"1rem"}}>
+        <p style={{ color: "white", fontSize: "1.1rem", marginTop: "1rem" }}>
           {" "}
           Based in Singapore and incoming to study in Champaign IL, I'm an
           engineer with experience in full-stack development and machine
           learning. I aim to gain professional experience in embedded systems,
-          cybersecurity and robotics. In my free time I enjoy being a
-          semi-professional photographer, a bookworm and a massive music nerd.
-          On a mission to love all sports!
+          cybersecurity and robotics. When I'm away from my keyboard, you'll
+          probably find me reading, playing music, practicing my photography or
+          planning my next engineering project."
         </p>{" "}
       </section>
 
