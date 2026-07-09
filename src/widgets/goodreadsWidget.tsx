@@ -29,13 +29,14 @@ export default function GoodreadsWidget() {
           }}
         >
           <img
-            src={book.image}
-            alt={book.title}
-            onError={(e) => {
-              e.currentTarget.src =
-                "https://placehold.co/58x88/111827/E5E7EB?text=Book";
-            }}
-          />
+    src={book.cover}
+    alt={book.title}
+    onError={(e) => {
+        console.log("Image failed:", book.cover);
+        e.currentTarget.src =
+            "https://placehold.co/60x90/111827/FFFFFF?text=📚";
+    }}
+/>
 
           <div className="gr-info">
             <h4>{book.title}</h4>
