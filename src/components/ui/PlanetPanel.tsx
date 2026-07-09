@@ -122,6 +122,15 @@ function AboutContent({ color }: { color: string }) {
             </span>
           </a>
           <a
+            href="mailto:sushena2@illinois.edu"
+            className="flex items-center gap-3 p-4 rounded bg-white/5 hover:bg-white/10 transition-colors border border-white/5 hover:border-white/20 group cursor-pointer"
+          >
+            <Mail className="text-white/50 group-hover:text-white transition-colors" />
+            <span className="font-medium tracking-wide">
+              sushena2@illinois.edu
+            </span>
+          </a>
+          <a
             href="https://www.linkedin.com/in/pradyun-sushena/"
             target="_blank"
             rel="noreferrer"
