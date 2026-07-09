@@ -1,0 +1,27 @@
+.goodreads-widget {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+}
+
+.book img {
+  width: 64px;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.book:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
