@@ -16,9 +16,9 @@ export default function GoodreadsWidget() {
 
   return (
     <div className="gr-widget">
-      
       {books.map((book) => (
         <motion.a
+          key={book.id}
           href={book.link}
           target="_blank"
           rel="noreferrer"
@@ -29,14 +29,14 @@ export default function GoodreadsWidget() {
           }}
         >
           <img
-    src={book.cover}
-    alt={book.title}
-    onError={(e) => {
-        console.log("Image failed:", book.cover);
-        e.currentTarget.src =
-            "https://placehold.co/60x90/111827/FFFFFF?text=📚";
-    }}
-/>
+            src={book.cover}
+            alt={book.title}
+            onError={(e) => {
+              console.log("Image failed:", book.cover);
+              e.currentTarget.src =
+                "https://placehold.co/60x90/111827/FFFFFF?text=📚";
+            }}
+          />
 
           <div className="gr-info">
             <h4>{book.title}</h4>

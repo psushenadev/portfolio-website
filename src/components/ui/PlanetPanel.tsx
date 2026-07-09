@@ -3,7 +3,7 @@ import { planets } from "../../data/universeData";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Code, Mail, User } from "lucide-react";
 import GoodreadsWidget from "../../widgets/goodreadsWidget";
-import "../../widgets/goodreads.css"
+import "../../widgets/goodreads.css";
 
 export function PlanetPanel() {
   const selectedPlanet = useUniverseStore((state) => state.selectedPlanet);
@@ -40,9 +40,11 @@ export function PlanetPanel() {
             >
               {planet.name}
             </h2>
-            <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
-              {planet.description}
-            </p>
+            {planet.id !== "contact" && (
+              <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
+                {planet.description}
+              </p>
+            )}
 
             {/* Custom Content Based on Planet */}
             <div className="flex-1">
@@ -70,37 +72,17 @@ function AboutContent({ color }: { color: string }) {
   return (
     <div className="flex flex-col gap-8">
       <section>
-        <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
-          Education
-        </h3>
-        <div className="p-4 rounded bg-white/5 border border-white/5">
-          <h4 className="font-bold text-white mb-1">
-            University of Illinois, Urbana-Champaign
-          </h4>
-          <p className="text-sm" style={{ color }}>
-            B.Sc, Computer Engineering
-          </p>
-          <p className="text-xs text-[#95A4C2] mt-2">2026 - 2030</p>
-        </div>
+        <p style={{ color: "white", fontSize: "1.1rem", marginTop:"1rem"}}>
+          {" "}
+          Based in Singapore and incoming to study in Champaign IL, I'm an
+          engineer with experience in full-stack development and machine
+          learning. I aim to gain professional experience in embedded systems,
+          cybersecurity and robotics. In my free time I enjoy being a
+          semi-professional photographer, a bookworm and a massive music nerd.
+          On a mission to love all sports!
+        </p>{" "}
       </section>
 
-      <section>
-        <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
-          Hobbies
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {["Robotics", "3D Modeling", "Photography", "Reading"].map(
-            (hobby) => (
-              <span
-                key={hobby}
-                className="px-3 py-1 rounded bg-white/5 border border-white/10 text-sm text-[#D5DCEB]"
-              >
-                {hobby}
-              </span>
-            )
-          )}
-        </div>
-      </section>
       <section>
         <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
           The Everday Soundtrack!
@@ -189,6 +171,18 @@ function ProjectsContent({ color }: { color: string }) {
 function ExperienceContent({ color }: { color: string }) {
   return (
     <div className="flex flex-col gap-4">
+      <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
+        Education
+      </h3>
+      <div className="p-4 rounded bg-white/5 border border-white/5">
+        <h4 className="font-bold text-white mb-1">
+          University of Illinois, Urbana-Champaign
+        </h4>
+        <p className="text-sm" style={{ color }}>
+          B.Sc, Computer Engineering
+        </p>
+        <p className="text-xs text-[#95A4C2] mt-2">2026 - 2030</p>
+      </div>
       {[
         {
           role: "Senior Engineer",
