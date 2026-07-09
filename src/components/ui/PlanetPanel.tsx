@@ -201,14 +201,13 @@ function ExperienceContent({ color }: { color: string }) {
             />
 
             <div className="flex justify-between items-start mb-1">
-              <h4 className="font-bold text-white">{exp.role}</h4>
-
-              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
+              <h4 className="font-bold text-white">{exp.institution}</h4>
             </div>
 
-            <div className="text-sm" style={{ color }}>
-              {exp.institution}
+            <div className="text-s" style={{ color }}>
+              {exp.role}
             </div>
+            <span className="text-sm text-[#95A4C2]">{exp.year}</span>
           </div>
         ))}
         <br />
@@ -241,13 +240,12 @@ function ExperienceContent({ color }: { color: string }) {
 
             <div className="flex justify-between items-start mb-1">
               <h4 className="font-bold text-white">{exp.role}</h4>
-
-              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
             </div>
 
-            <div className="text-sm" style={{ color }}>
+            <div className="text-s" style={{ color }}>
               {exp.company}
             </div>
+            <span className="text-sm text-[#95A4C2]">{exp.year}</span>
           </div>
         ))}
         <br />
@@ -275,13 +273,12 @@ function ExperienceContent({ color }: { color: string }) {
 
             <div className="flex justify-between items-start mb-1">
               <h4 className="font-bold text-white">{exp.role}</h4>
-
-              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
             </div>
 
-            <div className="text-sm" style={{ color }}>
+            <div className="text-s" style={{ color }}>
               {exp.company}
             </div>
+            <span className="text-s text-[#95A4C2]">{exp.year}</span>
           </div>
         ))}
         <br />
