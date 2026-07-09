@@ -56,9 +56,6 @@ export function PlanetPanel() {
                 <ExperienceContent color={planet.color} />
               )}
               {planet.id === "skills" && <SkillsContent color={planet.color} />}
-              {planet.id === "archive" && (
-                <ArchiveContent color={planet.color} />
-              )}
             </div>
           </div>
         </motion.div>
@@ -251,24 +248,6 @@ function SkillsContent({ color }: { color: string }) {
               </span>
             ))}
           </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ArchiveContent({ color }: { color: string }) {
-  console.log(color); // Fix unused var
-  return (
-    <div className="grid grid-cols-2 gap-3">
-      {[1, 2, 3, 4, 5, 6].map((i) => (
-        <div
-          key={i}
-          className="aspect-square rounded bg-white/5 border border-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer group"
-        >
-          <span className="text-white/30 group-hover:text-white/80 text-xs tracking-widest">
-            EXP_{i}
-          </span>
         </div>
       ))}
     </div>

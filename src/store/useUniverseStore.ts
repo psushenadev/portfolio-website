@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type PlanetId = 'projects' | 'experience' | 'skills' | 'archive' | 'contact' | null;
+export type PlanetId = 'projects' | 'experience' | 'skills' | 'contact' | null;
 
 interface UniverseState {
   selectedPlanet: PlanetId;

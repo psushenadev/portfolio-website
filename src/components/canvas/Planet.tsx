@@ -17,8 +17,7 @@ const colorMap: Record<string, string> = {
   'projects': '#FF644F', // initial planet colour d98b47, rings colour F2C078 --> FF644F FF8070
   'experience': '#D98B47',
   'skills': '#4D9A8A',
-  'archive': '#6E92B5',
-  'contact': '#8C7FA8',
+  'contact': '#6E92B5',
 };
 
 export function Planet({ data, controlsRef }: PlanetProps) {
