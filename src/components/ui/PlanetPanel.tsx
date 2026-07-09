@@ -71,12 +71,12 @@ function AboutContent({ color }: { color: string }) {
       <section>
         <p style={{ color: "white", fontSize: "1.1rem", marginTop: "1rem" }}>
           {" "}
-          Based in Singapore and incoming to study in Champaign IL, I'm an
-          engineer with experience in full-stack development and machine
+          Based in Singapore and incoming to study Computer Engineering in
+          Champaign IL, I have experience in full-stack development and machine
           learning. I aim to gain professional experience in embedded systems,
           cybersecurity and robotics. When I'm away from my keyboard, you'll
-          probably find me reading, playing music, practicing my photography or
-          planning my next engineering project."
+          find me reading, playing music, practicing my photography or planning
+          my next engineering project.
         </p>{" "}
       </section>
 
@@ -86,12 +86,9 @@ function AboutContent({ color }: { color: string }) {
         </h3>
         <iframe
           data-testid="embed-iframe"
-          //style="border-radius:12px"
           src="https://open.spotify.com/embed/playlist/17IDIjdDYvC8xVbRTxQBXn?utm_source=generator&theme=0&si=95b35fb0a9354da5"
           width="100%"
           height="352"
-          frameBorder="0"
-          //allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
@@ -176,48 +173,119 @@ function ProjectsContent({ color }: { color: string }) {
 
 function ExperienceContent({ color }: { color: string }) {
   return (
-    <div className="flex flex-col gap-4">
-      <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
-        Education
-      </h3>
-      <div className="p-4 rounded bg-white/5 border border-white/5">
-        <h4 className="font-bold text-white mb-1">
-          University of Illinois, Urbana-Champaign
-        </h4>
-        <p className="text-sm" style={{ color }}>
-          B.Sc, Computer Engineering
-        </p>
-        <p className="text-xs text-[#95A4C2] mt-2">2026 - 2030</p>
-      </div>
-      {[
-        {
-          role: "Senior Engineer",
-          company: "Tech Corp",
-          year: "2023 - Present",
-        },
-        {
-          role: "Frontend Developer",
-          company: "Startup Inc",
-          year: "2021 - 2023",
-        },
-      ].map((exp, i) => (
-        <div
-          key={i}
-          className="p-4 rounded bg-white/5 border border-white/5 relative pl-6"
-        >
+    <div>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
+          Education
+        </h3>
+
+        {[
+          {
+            institution: "The University of Illinois, Urbana-Champaign",
+            role: "B.S, Computer Engineering",
+            year: "August 2026 - Present",
+          },
+          {
+            institution: "North London Collegiate School, Singapore",
+            role: "IB Diploma",
+            year: "September 2024 - June 2026",
+          },
+        ].map((exp, i) => (
           <div
-            className="absolute left-0 top-0 bottom-0 w-1 rounded-l"
-            style={{ backgroundColor: color, opacity: 0.8 }}
-          />
-          <div className="flex justify-between items-start mb-1">
-            <h4 className="font-bold text-white">{exp.role}</h4>
-            <span className="text-xs text-[#95A4C2]">{exp.year}</span>
+            key={i}
+            className="p-4 rounded bg-white/5 border border-white/5 relative pl-6"
+          >
+            <div
+              className="absolute left-0 top-0 bottom-0 w-1 rounded-l"
+              style={{ backgroundColor: color, opacity: 0.8 }}
+            />
+
+            <div className="flex justify-between items-start mb-1">
+              <h4 className="font-bold text-white">{exp.role}</h4>
+
+              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
+            </div>
+
+            <div className="text-sm" style={{ color }}>
+              {exp.institution}
+            </div>
           </div>
-          <div className="text-sm" style={{ color: color }}>
-            {exp.company}
+        ))}
+        <br />
+      </div>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
+          Work
+        </h3>
+
+        {[
+          {
+            role: "Project Intern",
+            company: "Techmojo Solutions",
+            year: "November 2024 - January 2025",
+          },
+          {
+            role: "Tutoring Intern",
+            company: "RoboG",
+            year: "April 2019 - June 2019",
+          },
+        ].map((exp, i) => (
+          <div
+            key={i}
+            className="p-4 rounded bg-white/5 border border-white/5 relative pl-6"
+          >
+            <div
+              className="absolute left-0 top-0 bottom-0 w-1 rounded-l"
+              style={{ backgroundColor: color, opacity: 0.8 }}
+            />
+
+            <div className="flex justify-between items-start mb-1">
+              <h4 className="font-bold text-white">{exp.role}</h4>
+
+              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
+            </div>
+
+            <div className="text-sm" style={{ color }}>
+              {exp.company}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+        <br />
+      </div>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
+          Research and Teams
+        </h3>
+
+        {[
+          {
+            role: "Graphic Designer and Design Engineer",
+            company: "Romulus Racing, F1 in Schools",
+            year: "November 2024 - November 2024",
+          },
+        ].map((exp, i) => (
+          <div
+            key={i}
+            className="p-4 rounded bg-white/5 border border-white/5 relative pl-6"
+          >
+            <div
+              className="absolute left-0 top-0 bottom-0 w-1 rounded-l"
+              style={{ backgroundColor: color, opacity: 0.8 }}
+            />
+
+            <div className="flex justify-between items-start mb-1">
+              <h4 className="font-bold text-white">{exp.role}</h4>
+
+              <span className="text-xs text-[#95A4C2]">{exp.year}</span>
+            </div>
+
+            <div className="text-sm" style={{ color }}>
+              {exp.company}
+            </div>
+          </div>
+        ))}
+        <br />
+      </div>
     </div>
   );
 }

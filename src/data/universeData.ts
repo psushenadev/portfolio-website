@@ -18,8 +18,8 @@ export const planets: PlanetData[] = [
   {
     id: 'projects',
     name: 'Projects',
-    radius: 1.5,
-    distance: 8,
+    radius: 1.7,
+    distance: 13,
     orbitalSpeed: 0.05,
     rotationSpeed: 0.2,
     tilt: 0.1,
@@ -31,8 +31,8 @@ export const planets: PlanetData[] = [
   {
     id: 'experience',
     name: 'Experience',
-    radius: 1.2,
-    distance: 14,
+    radius: 1.4,
+    distance: 22,
     orbitalSpeed: 0.03,
     rotationSpeed: 0.15,
     tilt: 0.4,
@@ -44,8 +44,8 @@ export const planets: PlanetData[] = [
   {
     id: 'skills',
     name: 'Skills',
-    radius: 1.0,
-    distance: 20,
+    radius: 1.2,
+    distance: 29,
     orbitalSpeed: 0.02,
     rotationSpeed: 0.1,
     tilt: 0.2,
@@ -57,8 +57,8 @@ export const planets: PlanetData[] = [
   {
     id: 'contact',
     name: 'About',
-    radius: 0.8,
-    distance: 26,
+    radius: 1,
+    distance: 37,
     orbitalSpeed: 0.015,
     rotationSpeed: 0.08,
     tilt: 0.3,

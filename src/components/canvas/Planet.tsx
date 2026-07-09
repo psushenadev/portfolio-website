@@ -14,8 +14,8 @@ interface PlanetProps {
 
 const colorMap: Record<string, string> = {
   
-  'projects': '#FF644F', // initial planet colour d98b47, rings colour F2C078 --> FF644F FF8070
-  'experience': '#D98B47',
+  'projects': '#FF644F',
+  'experience': '#F08F3A',
   'skills': '#4D9A8A',
   'contact': '#6E92B5',
 };
