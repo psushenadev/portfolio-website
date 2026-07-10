@@ -486,9 +486,7 @@ function ExperienceContent({ color }: { color: string }) {
                         animate={{
                           rotate: expanded ? 180 : 0,
                         }}
-                      >
-                        
-                      </motion.div>
+                      ></motion.div>
                     </div>
                   </button>
 
