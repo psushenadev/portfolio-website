@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, User } from "lucide-react";
 import GoodreadsWidget from "../widgets/goodreadsWidget";
 import "../widgets/goodreads.css";
-import { ChevronDown } from "lucide-react";
-import { experiences } from "../../data/experienceData";
 import { useState } from "react";
 
 export function PlanetPanel() {
@@ -543,7 +541,7 @@ function ExperienceContent({ color }: { color: string }) {
   );
 }
 
-function Section({
+/*function Section({
   title,
   items,
   color,
@@ -575,7 +573,7 @@ function Section({
       </div>
     </div>
   );
-}
+}*/
 
 function SkillsContent({ color }: { color: string }) {
   console.log(color); // Fix unused var
