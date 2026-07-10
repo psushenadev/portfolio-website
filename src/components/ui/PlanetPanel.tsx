@@ -16,6 +16,15 @@ export function PlanetPanel() {
 
   const planet = planets.find((p) => p.id === selectedPlanet);
 
+  const ComponentMap = {
+    projects: ProjectsPlanet,
+    experience: ExperiencePlanet,
+    skills: SkillsPlanet,
+    contact: AboutPlanet,
+  };
+
+  const SelectedComponent = planet ? ComponentMap[planet.id] : null;
+
   return (
     <AnimatePresence>
       {planet && (
@@ -46,10 +55,7 @@ export function PlanetPanel() {
 
             {/* Custom Content Based on Planet */}
             <div className="flex-1">
-              switch(id) case "projects": return <ProjectsPlanet color={planet.color} />
-              case "experience": return <ExperiencePlanet color={planet.color} />
-              case "skills": return <SkillsPlanet color={planet.color} />
-              case "contact": return <AboutPlanet color={planet.color} />
+              {SelectedComponent && <SelectedComponent color={planet.color} />}
             </div>
           </div>
         </motion.div>
