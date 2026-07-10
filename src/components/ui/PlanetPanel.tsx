@@ -43,11 +43,12 @@ export function PlanetPanel() {
 
             {!["contact", "experience", "skills", "projects"].includes(
               planet.id
-            ) && (
-              <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
-                {planet.description}
-              </p>
-            )}
+            ) &&
+              planet.description !== null && (
+                <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
+                  {planet.description}
+                </p>
+              )}
 
             {/* Custom Content Based on Planet */}
             <div className="flex-1">
@@ -209,7 +210,9 @@ function ProjectsContent({ color }: { color: string }) {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 rounded-full bg-white/5 border border-white/10 text-[#95A4C2]" style={{fontSize: "0.8rem",}}>
+                  className="px-2 py-1 rounded-full bg-white/5 border border-white/10 text-[#95A4C2]"
+                  style={{ fontSize: "0.8rem" }}
+                >
                   {tech}
                 </span>
               ))}
@@ -224,7 +227,7 @@ function ProjectsContent({ color }: { color: string }) {
 function ExperienceContent({ color }: { color: string }) {
   return (
     <div>
-      <br/>
+      <br />
       <div className="flex flex-col gap-4">
         <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
           Education
