@@ -1,9 +1,9 @@
 import { useUniverseStore } from "../../store/useUniverseStore";
 import { planets } from "../../data/universeData";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Code, Mail, User } from "lucide-react";
-import GoodreadsWidget from "../../widgets/goodreadsWidget";
-import "../../widgets/goodreads.css";
+import { X, Mail, User } from "lucide-react";
+import GoodreadsWidget from "../widgets/goodreadsWidget";
+import "../widgets/goodreads.css";
 
 export function PlanetPanel() {
   const selectedPlanet = useUniverseStore((state) => state.selectedPlanet);
@@ -40,7 +40,10 @@ export function PlanetPanel() {
             >
               {planet.name}
             </h2>
-            {planet.id !== "contact" && (
+
+            {!["contact", "experience", "skills", "projects"].includes(
+              planet.id
+            ) && (
               <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
                 {planet.description}
               </p>
@@ -140,32 +143,79 @@ function AboutContent({ color }: { color: string }) {
 }
 
 function ProjectsContent({ color }: { color: string }) {
+  const projects = [
+    {
+      title: "ChildReach Register Management System",
+      period: "2024 - 2026",
+      description:
+        "A full-stack register and attendance management platform for ChildReach Singapore. The system replaces spreadsheet-based workflows with a secure, role-based application supporting volunteer management, attendance tracking, register creation, and analytics.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Spring Boot",
+        "Java",
+        "MySQL",
+        "JWT Authentication",
+      ],
+      github: "https://github.com/psushenadev/Childreach-DBMS-Frontend",
+    },
+    {
+      title: "SignBridge AI",
+      period: "2026 – Present",
+      description:
+        "An AI-powered, edge-based sign language translation platform. The project uses computer vision and deep learning to translate sign language into natural language, with ongoing work focused on conversational translation and multilingual support.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "MediaPipe",
+        "Transformers",
+        "GCNs",
+      ],
+      github: "https://github.com/YOUR_USERNAME/sign-language-translator",
+    },
+  ];
+
   return (
-    <div className="flex flex-col gap-4">
-      {[1, 2, 3].map((i) => (
-        <div
-          key={i}
-          className="p-4 rounded bg-white/5 border border-white/5 hover:border-white/20 transition-all group"
+    <div className="flex flex-col gap-5">
+      <br />
+      {projects.map((project) => (
+        <a
+          key={project.title}
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="block group"
         >
-          <h3
-            className="font-bold text-lg mb-1 group-hover:text-white transition-colors"
-            style={{ color: color }}
-          >
-            Project Alpha {i}
-          </h3>
-          <p className="text-sm text-[#D5DCEB] mb-3">
-            A brief description of this amazing project showcasing React and
-            Three.js.
-          </p>
-          <div className="flex gap-3">
-            <button className="text-xs flex items-center gap-1 text-[#95A4C2] hover:text-white transition-colors cursor-pointer">
-              <Code size={14} /> Code
-            </button>
-            <button className="text-xs flex items-center gap-1 text-[#95A4C2] hover:text-white transition-colors cursor-pointer">
-              <ExternalLink size={14} /> Live Demo
-            </button>
+          <div className="p-5 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 hover:bg-white/7 transition-all duration-300">
+            <div className="flex justify-between items-start mb-2">
+              <h3
+                className="font-bold text-xl transition-colors group-hover:text-white"
+                style={{ color }}
+              >
+                {project.title}
+              </h3>
+            </div>
+            <span className="text-s text-[#95A4C2] whitespace-nowrap">
+              {project.period}
+            </span>
+            <p
+              className="text-s text-[#D5DCEB] leading-relaxed mb-4"
+              style={{ marginTop: "0.6rem" }}
+            >
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2 py-1 rounded-full bg-white/5 border border-white/10 text-[#95A4C2]" style={{fontSize: "0.8rem",}}>
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );
@@ -174,6 +224,7 @@ function ProjectsContent({ color }: { color: string }) {
 function ExperienceContent({ color }: { color: string }) {
   return (
     <div>
+      <br/>
       <div className="flex flex-col gap-4">
         <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
           Education

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { useGoodreads } from "../hooks/useGoodreads";
-import "../../src/widgets/goodreads.css";
+import { useGoodreads } from "../../hooks/useGoodreads";
+import "./goodreads.css";
 
 export default function GoodreadsWidget() {
   const { books, loading, error } = useGoodreads();
