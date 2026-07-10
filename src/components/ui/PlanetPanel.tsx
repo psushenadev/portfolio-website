@@ -41,14 +41,14 @@ export function PlanetPanel() {
               {planet.name}
             </h2>
 
-            {!["contact", "experience", "skills", "projects"].includes(
+            {/*{!["contact", "experience", "skills", "projects"].includes(
               planet.id
             ) &&
               planet.description !== null && (
                 <p className="text-[#95A4C2] leading-relaxed mb-8 text-sm">
                   {planet.description}
                 </p>
-              )}
+              )}*/}
 
             {/* Custom Content Based on Planet */}
             <div className="flex-1">
@@ -86,7 +86,7 @@ function AboutContent({ color }: { color: string }) {
 
       <section>
         <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">
-          The Everday Soundtrack!
+          The Everday Soundtrack
         </h3>
         <iframe
           data-testid="embed-iframe"
