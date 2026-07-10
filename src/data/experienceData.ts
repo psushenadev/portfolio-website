@@ -1,67 +1,98 @@
-export interface Experience {
-    institution: string;
-    role: string;
-    period: string;
-    summary: string;
-    coursework?: string[];
-    technologies?: string[];
-    projects?: string[];
-  }
-  
-  export const experiences: Experience[] = [
+    export const experienceSections = [
     {
-      institution: "University of Illinois Urbana-Champaign",
-      role: "B.S. Computer Engineering",
-      period: "August 2026 – Present",
-  
-      summary:
-        "Studying Computer Engineering with a focus on artificial intelligence, robotics and embedded systems while pursuing independent software projects.",
-  
-      coursework: [
-        "Artificial Intelligence",
-        "Computer Architecture",
-        "Robotics",
-        "Embedded Systems"
+      title: "Education",
+      items: [
+        {
+          title: "The University of Illinois Urbana-Champaign",
+          subtitle: "B.S. Computer Engineering",
+          period: "August 2026 – Present",
+
+          summary:
+            "Placeholder: Describe your coursework, extracurricular activities, projects and research interests at UIUC.",
+
+          highlights: [
+            "Computer Engineering",
+            "Artificial Intelligence",
+            "Robotics",
+            "Embedded Systems",
+          ],
+        },
+
+        {
+          title: "North London Collegiate School, Singapore",
+          subtitle: "International Baccalaureate Diploma",
+          period: "September 2022 – June 2026",
+
+          summary:
+            "Placeholder: Discuss the IB Diploma, academic achievements, leadership positions and major projects completed during high school.",
+
+          highlights: [
+            "Mathematics AA HL",
+            "Physics HL",
+            "Computer Science HL",
+            "French B HL",
+          ],
+        },
       ],
-  
-      technologies: [
-        "C++",
-        "Python",
-        "Linux",
-        "Git"
-      ],
-  
-      projects: [
-        "Project Helios",
-        "Sign Language Translator"
-      ]
     },
-  
+
     {
-      institution: "North London Collegiate School Singapore",
-      role: "International Baccalaureate Diploma",
-      period: "2022 – 2026",
-  
-      summary:
-        "Graduated with Higher Level Mathematics AA, Physics, Computer Science and French while developing numerous engineering and software projects.",
-  
-      coursework: [
-        "Mathematics AA HL",
-        "Physics HL",
-        "Computer Science HL",
-        "History SL",
-        "French B HL"
+      title: "Work",
+
+      items: [
+        {
+          title: "Techmojo Solutions",
+
+          subtitle: "Project Intern",
+
+          period: "November 2024 – January 2025",
+
+          summary:
+            "Placeholder: Explain your responsibilities, technical contributions and what you learned during the internship.",
+
+          highlights: [
+            "Software Development",
+            "Project Management",
+            "Team Collaboration",
+          ],
+        },
+
+        {
+          title: "RoboG",
+
+          subtitle: "Tutoring Intern",
+
+          period: "April 2019 – June 2019",
+
+          summary:
+            "Placeholder: Describe the robotics curriculum you taught and how you mentored younger students.",
+
+          highlights: ["Teaching", "Robotics", "STEM Education"],
+        },
       ],
-  
-      technologies: [
-        "Java",
-        "Python",
-        "MySQL"
+    },
+
+    {
+      title: "Research & Teams",
+
+      items: [
+        {
+          title: "Romulus Racing",
+
+          subtitle: "Graphic Designer & Design Engineer",
+
+          period: "November 2024",
+
+          summary:
+            "Placeholder: Explain your role within the Formula One in Schools team, design process and engineering responsibilities.",
+
+          highlights: [
+            "CAD",
+            "Graphic Design",
+            "Engineering Design",
+            "F1 in Schools",
+          ],
+        },
       ],
-  
-      projects: [
-        "ChildReach Database",
-        "World Cup Monte Carlo Model"
-      ]
-    }
+    },
   ];
