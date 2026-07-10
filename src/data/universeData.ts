@@ -67,17 +67,4 @@ export const planets: PlanetData[] = [
     description: 'Experimentation. Ideas. Prototypes.',
     moons: 8
   },
- /* {
-    id: 'contact',
-    name: 'About',
-    radius: 0.5,
-    distance: 32,
-    orbitalSpeed: 0.01,
-    rotationSpeed: 0.05,
-    tilt: 0.05,
-    color: 'var(--color-helios-contact)',
-    secondaryColor: 'var(--color-helios-contact-sec)',
-    description: 'Educational background, hobbies, and contact info.',
-    moons: 1
-  }*/
 ];

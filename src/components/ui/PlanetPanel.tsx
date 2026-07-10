@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, User } from "lucide-react";
 import GoodreadsWidget from "../widgets/goodreadsWidget";
 import "../widgets/goodreads.css";
+import { ChevronDown } from "lucide-react";
+import { experiences } from "../../data/experienceData";
+import { useState } from "react";
 
 export function PlanetPanel() {
   const selectedPlanet = useUniverseStore((state) => state.selectedPlanet);
@@ -224,7 +227,7 @@ function ProjectsContent({ color }: { color: string }) {
   );
 }
 
-function ExperienceContent({ color }: { color: string }) {
+/*function ExperienceContent({ color }: { color: string }) {
   return (
     <div>
       <br />
@@ -336,6 +339,239 @@ function ExperienceContent({ color }: { color: string }) {
           </div>
         ))}
         <br />
+      </div>
+    </div>
+  );
+}*/
+function ExperienceContent({ color }: { color: string }) {
+  const experienceSections = [
+    {
+      title: "Education",
+      items: [
+        {
+          title: "The University of Illinois Urbana-Champaign",
+          subtitle: "B.S. Computer Engineering",
+          period: "August 2026 – Present",
+
+          summary:
+            "Placeholder: Describe your coursework, extracurricular activities, projects and research interests at UIUC.",
+
+          highlights: [
+            "Computer Engineering",
+            "Artificial Intelligence",
+            "Robotics",
+            "Embedded Systems",
+          ],
+        },
+
+        {
+          title: "North London Collegiate School, Singapore",
+          subtitle: "International Baccalaureate Diploma",
+          period: "September 2022 – June 2026",
+
+          summary:
+            "Placeholder: Discuss the IB Diploma, academic achievements, leadership positions and major projects completed during high school.",
+
+          highlights: [
+            "Mathematics AA HL",
+            "Physics HL",
+            "Computer Science HL",
+            "French B HL",
+          ],
+        },
+      ],
+    },
+
+    {
+      title: "Work",
+
+      items: [
+        {
+          title: "Techmojo Solutions",
+
+          subtitle: "Project Intern",
+
+          period: "November 2024 – January 2025",
+
+          summary:
+            "Placeholder: Explain your responsibilities, technical contributions and what you learned during the internship.",
+
+          highlights: [
+            "Software Development",
+            "Project Management",
+            "Team Collaboration",
+          ],
+        },
+
+        {
+          title: "RoboG",
+
+          subtitle: "Tutoring Intern",
+
+          period: "April 2019 – June 2019",
+
+          summary:
+            "Placeholder: Describe the robotics curriculum you taught and how you mentored younger students.",
+
+          highlights: ["Teaching", "Robotics", "STEM Education"],
+        },
+      ],
+    },
+
+    {
+      title: "Research & Teams",
+
+      items: [
+        {
+          title: "Romulus Racing",
+
+          subtitle: "Graphic Designer & Design Engineer",
+
+          period: "November 2024",
+
+          summary:
+            "Placeholder: Explain your role within the Formula One in Schools team, design process and engineering responsibilities.",
+
+          highlights: [
+            "CAD",
+            "Graphic Design",
+            "Engineering Design",
+            "F1 in Schools",
+          ],
+        },
+      ],
+    },
+  ];
+  const [open, setOpen] = useState<string | null>(null);
+
+  return (
+    <div className="space-y-10">
+      {experienceSections.map((section) => (
+        <section key={section.title}>
+          <h3 className="text-sm tracking-widest uppercase text-white/50 mb-4">
+            {section.title}
+          </h3>
+
+          <div className="space-y-4">
+            {section.items.map((exp) => {
+              const expanded = open === exp.title;
+
+              return (
+                <motion.div
+                  key={exp.title}
+                  layout
+                  transition={{
+                    layout: {
+                      duration: 0.35,
+                    },
+                  }}
+                  className="rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+                >
+                  <button
+                    onClick={() => setOpen(expanded ? null : exp.title)}
+                    className="w-full text-left p-5 hover:bg-white/5 transition cursor-pointer"
+                  >
+                    <div className="flex justify-between">
+                      <div>
+                        <h4 className="font-bold text-lg" style={{ color }}>
+                          {exp.title}
+                        </h4>
+
+                        <p className="text-white mt-1">{exp.subtitle}</p>
+
+                        <p className="text-sm text-[#95A4C2] mt-2">
+                          {exp.period}
+                        </p>
+                      </div>
+
+                      <motion.div
+                        animate={{
+                          rotate: expanded ? 180 : 0,
+                        }}
+                      >
+                        
+                      </motion.div>
+                    </div>
+                  </button>
+
+                  <AnimatePresence>
+                    {expanded && (
+                      <motion.div
+                        initial={{
+                          opacity: 0,
+                          height: 0,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          height: "auto",
+                        }}
+                        exit={{
+                          opacity: 0,
+                          height: 0,
+                        }}
+                        transition={{
+                          duration: 0.25,
+                        }}
+                        className="px-5 pb-5"
+                      >
+                        <div className="border-t border-white/10 pt-5">
+                          <p className="text-[#D5DCEB] leading-7 mb-5">
+                            {exp.summary}
+                          </p>
+
+                          <div className="flex flex-wrap gap-2">
+                            {exp.highlights.map((item) => (
+                              <span
+                                key={item}
+                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm"
+                              >
+                                {item}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function Section({
+  title,
+  items,
+  color,
+}: {
+  title: string;
+  items?: string[];
+  color: string;
+}) {
+  if (!items?.length) return null;
+
+  return (
+    <div className="mb-6">
+      <h4
+        className="uppercase tracking-[0.25em] text-xs mb-3"
+        style={{ color }}
+      >
+        {title}
+      </h4>
+
+      <div className="flex flex-wrap gap-2">
+        {items.map((item) => (
+          <span
+            key={item}
+            className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm"
+          >
+            {item}
+          </span>
+        ))}
       </div>
     </div>
   );
