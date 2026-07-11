@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import type { Experience, ExperienceCardProps } from "../../types/experience";
 
-export default function ExperienceCard({ section, color }) {
+export default function ExperienceCard({ section, color }: ExperienceCardProps) {
   const [open, setOpen] = useState<string | null>(null);
   return (
     <div>
@@ -11,7 +12,7 @@ export default function ExperienceCard({ section, color }) {
         </h3>
 
         <div className="space-y-4">
-          {section.items.map((exp) => {
+          {section.items.map((exp: Experience) => {
             const expanded = open === exp.title;
 
             return (

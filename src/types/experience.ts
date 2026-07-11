@@ -1,9 +1,17 @@
 export interface Experience {
-    institution: string;
-    role: string;
+    title: string;
+    subtitle: string;
     period: string;
     summary: string;
-    coursework?: string[];
-    technologies?: string[];
-    projects?: string[];
+    highlights: string[];
+  }
+  
+  export interface ExperienceSection {
+    title: string;
+    items: Experience[];
+  }
+  
+  export interface ExperienceCardProps {
+    section: ExperienceSection;
+    color: string;
   }
