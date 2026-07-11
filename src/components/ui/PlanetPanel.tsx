@@ -23,7 +23,10 @@ export function PlanetPanel() {
     contact: AboutPlanet,
   };
 
-  const SelectedComponent = planet ? ComponentMap[planet.id] : null;
+  const SelectedComponent =
+    planet && planet.id in ComponentMap
+      ? ComponentMap[planet.id as keyof typeof ComponentMap]
+      : null;
 
   return (
     <AnimatePresence>

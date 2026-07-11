@@ -1,4 +1,6 @@
-export default function ProjectCard({ project, color }) {
+import type {ProjectCardProps}  from "../../types/projects";
+
+export default function ProjectCard({ project, color }: ProjectCardProps) {
   return (
     <div>
       <a
@@ -27,7 +29,7 @@ export default function ProjectCard({ project, color }) {
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.technologies.map((tech) => (
+            {project.technologies.map((tech: string) => (
               <span
                 key={tech}
                 className="px-2 py-1 rounded-full bg-white/5 border border-white/10 text-[#95A4C2]"
