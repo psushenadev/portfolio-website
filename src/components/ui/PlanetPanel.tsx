@@ -24,7 +24,7 @@ export function PlanetPanel() {
   };
 
   const SelectedComponent =
-    planet && planet.id in ComponentMap
+    planet?.id && planet.id in ComponentMap
       ? ComponentMap[planet.id as keyof typeof ComponentMap]
       : null;
 
