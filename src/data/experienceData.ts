@@ -1,98 +1,88 @@
-    export const experienceSections = [
-    {
-      title: "Education",
-      items: [
-        {
-          title: "The University of Illinois Urbana-Champaign",
-          subtitle: "B.S. Computer Engineering",
-          period: "August 2026 – Present",
+export const experienceSections = [
+  {
+    title: "Education",
+    items: [
+      {
+        title: "The University of Illinois Urbana-Champaign",
+        subtitle: "B.S. Computer Engineering",
+        period: "August 2026 – Present",
 
-          summary:
-            "Placeholder: Describe your coursework, extracurricular activities, projects and research interests at UIUC.",
+        summary: "Coming soon!",
 
-          highlights: [
-            "Computer Engineering",
-            "Artificial Intelligence",
-            "Robotics",
-            "Embedded Systems",
-          ],
-        },
+        highlights: ["Packing Suitcases", "Visa Applications"],
+      },
 
-        {
-          title: "North London Collegiate School, Singapore",
-          subtitle: "International Baccalaureate Diploma",
-          period: "September 2022 – June 2026",
+      {
+        title: "North London Collegiate School, Singapore",
+        subtitle: "International Baccalaureate Diploma",
+        period: "September 2022 – June 2026",
 
-          summary:
-            "Placeholder: Discuss the IB Diploma, academic achievements, leadership positions and major projects completed during high school.",
+        summary:
+          "Graduated the IB DP with 43/45, and as founder of the NLCS Astrophysics Society and Secretary General of the inaugural NLCSMUN conference. I was also tech lead for Childreach - more on that at another planet!",
 
-          highlights: [
-            "Mathematics AA HL",
-            "Physics HL",
-            "Computer Science HL",
-            "French B HL",
-          ],
-        },
-      ],
-    },
+        highlights: [
+          "Maths AA HL",
+          "Physics HL",
+          "Computer Science HL",
+          "AstroSoc",
+          "NLCSMUN",
+        ],
+      },
+    ],
+  },
 
-    {
-      title: "Work",
+  {
+    title: "Work",
 
-      items: [
-        {
-          title: "Techmojo Solutions",
+    items: [
+      {
+        title: "Techmojo Solutions",
 
-          subtitle: "Project Intern",
+        subtitle: "Project Intern",
 
-          period: "November 2024 – January 2025",
+        period: "November 2024 – January 2025",
 
-          summary:
-            "Placeholder: Explain your responsibilities, technical contributions and what you learned during the internship.",
+        summary:
+          "Joined the ALIGN team to develop backend APIs for finance-related clients. Learnt about Spring Boot, Node.JS and industry-level systems and backend architecture",
 
-          highlights: [
-            "Software Development",
-            "Project Management",
-            "Team Collaboration",
-          ],
-        },
+        highlights: ["Systems Architecture", "Java", "Rest API Development"],
+      },
 
-        {
-          title: "RoboG",
+      {
+        title: "RoboG",
 
-          subtitle: "Tutoring Intern",
+        subtitle: "Tutoring Intern",
 
-          period: "April 2019 – June 2019",
+        period: "April 2019 – June 2019",
 
-          summary:
-            "Placeholder: Describe the robotics curriculum you taught and how you mentored younger students.",
+        summary:
+          "Taught 30+ children between the ages of 12-16 about “drag and drop coding” through Lego EV3 robots.",
 
-          highlights: ["Teaching", "Robotics", "STEM Education"],
-        },
-      ],
-    },
+        highlights: ["Teaching", "STEM Education",],
+      },
+    ],
+  },
 
-    {
-      title: "Research & Teams",
+  {
+    title: "Research & Teams",
 
-      items: [
-        {
-          title: "Romulus Racing",
+    items: [
+      {
+        title: "Romulus Racing",
 
-          subtitle: "Graphic Designer & Design Engineer",
+        subtitle: "Graphic Designer & Design Engineer",
 
-          period: "November 2024",
+        period: "November 2024",
 
-          summary:
-            "Placeholder: Explain your role within the Formula One in Schools team, design process and engineering responsibilities.",
+        summary:
+          "Designed and maintained team branding, merchandising and social media. Assisted with ad hoc CAD design. Finished 3rd in Singapore National Finals 2024",
 
-          highlights: [
-            "CAD",
-            "Graphic Design",
-            "Engineering Design",
-            "F1 in Schools",
-          ],
-        },
-      ],
-    },
-  ];
+        highlights: [
+          "CAD",
+          "Graphic Design",
+          "Social Media & Marketing",
+        ],
+      },
+    ],
+  },
+];
