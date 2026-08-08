@@ -13,7 +13,7 @@ export function SkillsPlanet({ color }: { color: string }) {
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 rounded bg-white/5 border border-white/10 text-sm text-[#D5DCEB]"
+                  className="px-3 py-1 rounded bg-white/5 border border-white/10 text-m text-[#D5DCEB]"
                 >
                   {skill}
                 </span>
