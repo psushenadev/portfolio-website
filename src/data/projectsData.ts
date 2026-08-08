@@ -14,4 +14,12 @@ export const projects = [
     ],
     github: "https://github.com/psushenadev/Childreach-DBMS-Frontend",
   },
+  {
+    title: "Personal Portfolio Website",
+    period: "2026 -",
+    description:
+      "An awfully familiar website that uses optimised 3D graphics and physics to create a 3D solar system",
+    technologies: ["Three.js", "GSAP", "Zustand", "Typescript"],
+    github: "https://github.com/psushenadev/portfolio-website",
+  },
 ];
