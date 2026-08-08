@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "ChildReach Register Management System",
-    period: "2024 - 2026",
+    period: "October 2024 - November 2025",
     description:
       "A full-stack register and attendance management platform for ChildReach Singapore. The system replaces spreadsheet-based workflows with a secure, role-based application supporting volunteer management, attendance tracking, register creation, and analytics.",
     technologies: [
@@ -16,7 +16,7 @@ export const projects = [
   },
   {
     title: "Personal Portfolio Website",
-    period: "2026 -",
+    period: "July 2026 -",
     description:
       "An awfully familiar website that uses optimised 3D graphics and physics to create a 3D solar system",
     technologies: ["Three.js", "GSAP", "Zustand", "Typescript"],
