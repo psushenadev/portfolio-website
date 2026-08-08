@@ -9,7 +9,7 @@ export const experienceSections = [
 
         summary: "Coming soon!",
 
-        highlights: ["Packing Suitcases", "Visa Applications"],
+        highlights: ["Packing Suitcases", "Vaccinations"],
       },
 
       {
