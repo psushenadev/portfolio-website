@@ -8,13 +8,13 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vercel Serverless](https://img.shields.io/badge/Vercel-Serverless-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 
-This is my interactive 3D solar system portfolio website! I tried to replace traditional boring flat web pages with a real-time, interactive 3D universe where the portfolio sections (**Projects**, **Experience**, **Skills**, and **About Me**) are 3D planets orbiting around a central Sun.
+This is my interactive 3D solar system portfolio website! I tried to replace traditional boring flat web pages with a real-time 3D universe where the portfolio sections (**Projects**, **Experience**, **Skills**, and **About Me**) are 3D planets orbiting around a central Sun.
 
 ---
 
 ## Table of Contents
 
-- [What is Project Helios?](#-what-is-project-helios)
+- [What is This?](#-what-is-this)
 - [Cool Features](#-cool-features)
 - [3D Graphics Made Simple](#-3d-graphics-made-simple)
 - [Goodreads & Spotify Features](#-goodreads--spotify-features)
@@ -23,7 +23,7 @@ This is my interactive 3D solar system portfolio website! I tried to replace tra
 
 ---
 
-## What is Project Helios?
+## What is This?
 
 The average dev portfolio shows a flat page with text and links. I wanted to build something memorable that combines 3D graphics, web development, and interactivity:
 
