@@ -16,11 +16,8 @@ This is my interactive 3D solar system portfolio website! I tried to replace tra
 
 - [What is Project Helios?](#-what-is-project-helios)
 - [Cool Features](#-cool-features)
-- [How It Works (In Simple Terms)](#-how-it-works-in-simple-terms)
 - [3D Graphics Made Simple](#-3d-graphics-made-simple)
 - [Goodreads & Spotify Features](#-goodreads--spotify-features)
-- [Project Folders & Structure](#-project-folders--structure)
-- [Resume Bullet Points](#-resume-bullet-points)
 - [Tech Stack Summary](#-tech-stack-summary)
 - [How to Run It Locally](#-how-to-run-it-locally)
 
@@ -80,7 +77,7 @@ gsap.to(camera.position, {
 
 ---
 
-## ⚡ Goodreads & Spotify Features
+## Goodreads & Spotify Features
 
 To show my current reading list from Goodreads on the website, browsers block direct requests due to security rules (called CORS).
 
@@ -88,18 +85,6 @@ To solve this:
 - I created a small **backend function** (`/api/goodreads`) hosted on Vercel.
 - It fetches my Goodreads reading list XML feed on the server, converts it into clean JSON data, and sends it to the website.
 - It caches the result for 1 hour so the bookshelf loads instantly every time.
-
----
-
-## Resume Bullet Points
-
-*You can copy and paste these bullet points onto your resume or use them when explaining this project in interviews:*
-
-- **Built an interactive 3D portfolio website** using **React**, **TypeScript**, and **Three.js (React Three Fiber)**, replacing standard scrolling pages with an interactive 3D solar system.
-- **Created smooth 3D camera animations** using **GSAP**, smoothly zooming the camera to planets when double-clicked and pausing planetary orbit for easy reading.
-- **Optimized 3D rendering performance** using instanced rendering (`InstancedMesh`) to draw 3,000 background stars in 1 draw call, maintaining 60 FPS.
-- **Built a backend serverless API** on Vercel (`/api/goodreads`) using Node.js to fetch and parse Goodreads reading feeds into JSON with edge caching.
-- **Managed app state and glass UI overlays** using **Zustand** to track planet exploration progress and **Framer Motion** for smooth sidebar popups.
 
 ---
 
