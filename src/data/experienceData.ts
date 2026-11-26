@@ -8,9 +8,9 @@ export const experienceSections = [
         period: "August 2026 – Present",
 
         summary:
-          "Maintaining a 4.00 GPA in my first semester at UIUC. Relevant coursework includes Introduction to Computing, Introduction to Electronics, and Freshman Electronics Design.",
+          "Currently in my first semester at UIUC. Relevant coursework includes Introduction to Computing, Introduction to Electronics, and Freshman Electronics Design.",
 
-        highlights: ["GPA: 4.00/4.00", "ECE", "Intro to Computing", "Electronics Design"],
+        highlights: ["ECE", "Intro to Computing", "Electronics Design"],
       },
 
       {
@@ -37,6 +37,18 @@ export const experienceSections = [
 
     items: [
       {
+        title: "The Daily Illini",
+
+        subtitle: "Staff Photographer",
+
+        period: "October 2026 – Present",
+
+        summary:
+          "Photographing campus sports events and stories every month, collaborating with reporters and editors to deliver publication-ready images. I serve as a designated photographer for Dailly Illini soccer coverage, covering home matches and publishing in print and online.",
+
+        highlights: ["Photography", "Sports", "Print Media", "Journalism", "Photo Editing"],
+      },
+      {
         title: "Techmojo Solutions",
 
         subtitle: "Project Intern",
@@ -49,18 +61,7 @@ export const experienceSections = [
         highlights: ["Java", "Spring Boot", "REST API", "MySQL", "OpenAPI", "Node.js"],
       },
 
-      {
-        title: "The Daily Illini",
 
-        subtitle: "Staff Photographer",
-
-        period: "October 2026 – Present",
-
-        summary:
-          "Photograph 5+ campus sports events and campus stories every month, collaborating with reporters and editors to deliver publication-ready images within same-day turnaround — all while balancing a full engineering courseload. Serve as the designated photographer for Daily Illini soccer, covering home matches and publishing in print and online to 150+ locations across Champaign-Urbana.",
-
-        highlights: ["Photography", "Sports", "Print Media", "Journalism"],
-      },
 
       {
         title: "RoboG",
