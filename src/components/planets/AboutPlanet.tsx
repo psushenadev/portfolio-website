@@ -2,9 +2,12 @@ import { Mail, User } from "lucide-react";
 import GoodreadsWidget from "../widgets/goodreadsWidget";
 import "../widgets/goodreads.css";
 import SectionTitle from "../ui/SectionTitle";
+import { useGoodreads } from "../../hooks/useGoodreads";
 
 export function AboutPlanet({ color }: { color: string }) {
   console.log(color); // Fix unused var
+  const { books, loading } = useGoodreads();
+  const showBookshelf = loading || books.length > 0;
   return (
     <div className="flex flex-col gap-8">
       <section>
@@ -31,10 +34,12 @@ export function AboutPlanet({ color }: { color: string }) {
         ></iframe>
       </section>
 
+      {showBookshelf && (
       <section>
         <SectionTitle text={"My 'Wannabe' Bookshelf"}/>
         <GoodreadsWidget />
       </section>
+      )}
 
       <section>
         <h3 className="text-sm tracking-widest uppercase text-white/50 mb-3">

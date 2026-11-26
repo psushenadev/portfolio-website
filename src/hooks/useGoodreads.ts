@@ -9,9 +9,10 @@ export function useGoodreads() {
   const [error, setError] = useState("");
 
   interface GoodreadsResponse {
-    updated: string;
+    updated: string | null;
     count: number;
     books: GoodreadsBook[];
+    unavailable?: boolean;
   }
 
   useEffect(() => {
@@ -27,10 +28,14 @@ export function useGoodreads() {
 
         console.log(data);
 
-        setBooks(data.books);
+        if (data.unavailable || !Array.isArray(data.books)) {
+          setError("unavailable");
+        } else {
+          setBooks(data.books.slice(0, 8));
+        }
       } catch (err) {
         console.error("GOODREADS ERROR:", err);
-        setError("Couldn't load books.");
+        setError("unavailable");
       } finally {
         setLoading(false);
       }
@@ -39,6 +44,5 @@ export function useGoodreads() {
     load();
   }, []);
 
-  books: books.slice(0, 8);
   return { books, loading, error };
 }

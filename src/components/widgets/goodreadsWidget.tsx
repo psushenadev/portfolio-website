@@ -10,8 +10,8 @@ export default function GoodreadsWidget() {
     return <div className="gr-loading">Syncing with Goodreads...</div>;
   }
 
-  if (error) {
-    return <div className="gr-error">Unable to load bookshelf.</div>;
+  if (error || books.length === 0) {
+    return null;
   }
 
   return (

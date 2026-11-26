@@ -27,7 +27,8 @@ export default async function handler(req, res) {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch Goodreads");
+      console.error(`Goodreads responded with ${response.status} ${response.statusText}`);
+      return res.status(200).json({ updated: null, count: 0, books: [], unavailable: true });
     }
 
     const xml = await response.text();
@@ -75,8 +76,6 @@ export default async function handler(req, res) {
   } catch (err) {
     console.error(err);
 
-    return res.status(500).json({
-      error: "Unable to fetch Goodreads.",
-    });
+    return res.status(200).json({ updated: null, count: 0, books: [], unavailable: true });
   }
 }
