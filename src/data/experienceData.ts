@@ -7,9 +7,10 @@ export const experienceSections = [
         subtitle: "B.S. Computer Engineering",
         period: "August 2026 – Present",
 
-        summary: "Coming soon!",
+        summary:
+          "Maintaining a 4.00 GPA in my first semester at UIUC. Relevant coursework includes Introduction to Computing, Introduction to Electronics, and Freshman Electronics Design.",
 
-        highlights: ["Packing Suitcases", "Vaccinations"],
+        highlights: ["GPA: 4.00/4.00", "ECE", "Intro to Computing", "Electronics Design"],
       },
 
       {
@@ -43,9 +44,22 @@ export const experienceSections = [
         period: "November 2024 – January 2025",
 
         summary:
-          "Joined the ALIGN team to develop backend APIs for finance-related clients. Learnt about Spring Boot, Node.JS and industry-level systems and backend architecture",
+          "Designed 10 REST APIs in Java Spring Boot backed by a normalised MySQL schema, with Postman validation and OpenAPI documentation, exposing index data to internal services. Also wrote a 10-page technical report benchmarking Spring Boot vs Node.js on performance and scalability.",
 
-        highlights: ["Systems Architecture", "Java", "Rest API Development"],
+        highlights: ["Java", "Spring Boot", "REST API", "MySQL", "OpenAPI", "Node.js"],
+      },
+
+      {
+        title: "The Daily Illini",
+
+        subtitle: "Staff Photographer",
+
+        period: "October 2026 – Present",
+
+        summary:
+          "Photograph 5+ campus sports events and campus stories every month, collaborating with reporters and editors to deliver publication-ready images within same-day turnaround — all while balancing a full engineering courseload. Serve as the designated photographer for Daily Illini soccer, covering home matches and publishing in print and online to 150+ locations across Champaign-Urbana.",
+
+        highlights: ["Photography", "Sports", "Print Media", "Journalism"],
       },
 
       {

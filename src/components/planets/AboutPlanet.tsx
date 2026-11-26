@@ -13,17 +13,17 @@ export function AboutPlanet({ color }: { color: string }) {
       <section>
         <p style={{ color: "white", fontSize: "1.1rem", marginTop: "1rem" }}>
           {" "}
-          Based in Singapore and incoming to study Computer Engineering in
+          Based in Singapore and studying Computer Engineering in
           Champaign IL, I have experience in full-stack development and machine
-          learning. I aim to gain professional experience in embedded systems,
-          cybersecurity and robotics. When I'm away from my keyboard, you'll
-          find me reading, playing music, practicing my photography or planning
-          my next engineering project.
+          learning. I'm currently looking for professional experience in camera algorithms, computer vision and robotics.
+          When I'm away from my keyboard,
+          you'll find me with my camera around campus, reading, playing music or
+          working on my latest engineering project.
         </p>{" "}
       </section>
 
       <section>
-        <SectionTitle text={"The Everyday Soundtrack"}/>
+        <SectionTitle text={"The Everyday Soundtrack"} />
         <iframe
           data-testid="embed-iframe"
           src="https://open.spotify.com/embed/playlist/17IDIjdDYvC8xVbRTxQBXn?utm_source=generator&theme=0&si=95b35fb0a9354da5"
@@ -35,10 +35,10 @@ export function AboutPlanet({ color }: { color: string }) {
       </section>
 
       {showBookshelf && (
-      <section>
-        <SectionTitle text={"My 'Wannabe' Bookshelf"}/>
-        <GoodreadsWidget />
-      </section>
+        <section>
+          <SectionTitle text={"My 'Wannabe' Bookshelf"} />
+          <GoodreadsWidget />
+        </section>
       )}
 
       <section>
