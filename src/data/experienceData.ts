@@ -46,7 +46,7 @@ export const experienceSections = [
         summary:
           "Photographing campus sports events and stories every month, collaborating with reporters and editors to deliver publication-ready images. I serve as a designated photographer for Dailly Illini soccer coverage, covering home matches and publishing in print and online.",
 
-        highlights: ["Photography", "Sports", "Print Media", "Journalism", "Photo Editing"],
+        highlights: ["Photography", "Print Media", "Journalism", "Photo Editing"],
       },
       {
         title: "Techmojo Solutions",
